@@ -4,7 +4,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative">
       <Navigation />
       <div className="fixed top-20 right-4 z-40 scale-125">
         <ThemeToggle />
