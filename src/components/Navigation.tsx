@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter, Instagram } from "lucide-react";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
@@ -37,6 +37,14 @@ export const Navigation = () => {
                   className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   Projects
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link 
+                  to="/resume"
+                  className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                >
+                  Resume
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
