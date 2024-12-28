@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter, Instagram } from "lucide-react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { ThemeToggle } from "./ThemeToggle";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
@@ -52,7 +51,6 @@ export const Navigation = () => {
           </NavigationMenu>
 
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
             {socialLinks.map((link) => (
               <motion.a
                 key={link.label}
