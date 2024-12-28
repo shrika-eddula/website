@@ -46,6 +46,17 @@ export const ScrapbookFrames = () => {
           Picture 4
         </div>
       </motion.div>
+
+      <motion.div
+        initial={{ rotate: -2, scale: 0.9, opacity: 0 }}
+        animate={{ rotate: -2, scale: 1, opacity: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+        className="absolute top-48 left-1/3 w-44 aspect-[4/3] bg-white p-3 shadow-lg rounded-sm"
+      >
+        <div className="w-full h-full bg-blue-50 rounded-sm flex items-center justify-center text-blue-300">
+          Picture 5
+        </div>
+      </motion.div>
     </div>
   );
 };
