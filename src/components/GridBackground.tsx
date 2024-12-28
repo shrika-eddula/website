@@ -30,12 +30,10 @@ function Grid() {
     <group>
       <gridHelper
         ref={gridRef}
-        args={[30, 30]}
+        args={[30, 30, '#4338ca', '#4338ca']}
         position={[0, -2, 0]}
         rotation={[1.5, 0, 0]}
-      >
-        <meshBasicMaterial attach="material" color="#4338ca" opacity={0.2} transparent />
-      </gridHelper>
+      />
       <ambientLight intensity={0.1} />
       <directionalLight position={[5, 5, 5]} intensity={0.5} />
     </group>
