@@ -8,8 +8,8 @@ const timelineItems = [
     title: "Software Engineering Intern",
     division: "Vision Products Group",
     location: "Seattle, WA",
-    description: "Prototyped Human Computer Interfaces for the R&D wing, leveraging AI and augmented reality to develop revolutionary experiences. Developed an entirely new application paradigm requiring rapid experimentation and prototyping.",
-    logo: "/apple-logo.svg"
+    description: "Prototyped Human Computer Interfaces for the R&D wing, leveraging AI and augmented reality to develop revolutionary experiences.",
+    logo: "/apple.png"
   },
   {
     year: "April 2023 – June 2024",
@@ -17,8 +17,8 @@ const timelineItems = [
     title: "Undergraduate Researcher",
     division: "Camera Culture Group",
     location: "Boston, MA",
-    description: "Reconstructed 3D models from satellite imagery using Neural Radiance Fields (NeRF). Developed Eulerian Video Magnification + Senior Fusion approach for forest fire prediction.",
-    logo: "/mit-logo.svg"
+    description: "Reconstructed 3D models from satellite imagery using Neural Radiance Fields (NeRF) for handling complex lighting and shadow challenges.",
+    logo: "/mit.png"
   },
   {
     year: "June 2023 – August 2023",
@@ -26,8 +26,8 @@ const timelineItems = [
     title: "Machine Learning Intern",
     division: "Embedded Machine Learning",
     location: "Natik, MA",
-    description: "Designed autonomous drone device for battlefield consciousness assessment using Glasgow Coma Scale. Implemented tinyML algorithms with pose detection, computer vision, and NLP for real-time processing on Nvidia Jetson Nano.",
-    logo: "/army-logo.svg"
+    description: "Designed autonomous drone device for battlefield consciousness assessment using Glasgow Coma Scale with tinyML algorithms.",
+    logo: "/army.png"
   },
   {
     year: "May 2019 – February 2022",
@@ -35,17 +35,17 @@ const timelineItems = [
     title: "Undergraduate Researcher & Lab Manager",
     division: "Computational Chemistry",
     location: "Dallas, TX",
-    description: "Led computational chemistry research on toxin/pollutant adsorption prediction. Managed lab operations, mentored students, and published first-authored paper.",
-    logo: "/unt-logo.svg"
+    description: "Led computational chemistry research on toxin/pollutant adsorption prediction, resulting in 12 publications.",
+    logo: "/unt.png"
   }
 ];
 
 export const Timeline = () => {
   return (
-    <section className="py-16 px-4 bg-background dark:bg-background" id="about">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 px-4 bg-background dark:bg-background" id="about">
+      <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-foreground">My Journey</h2>
-        <div className="space-y-8">
+        <div className="space-y-6">
           {timelineItems.map((item, index) => (
             <motion.div
               key={index}
@@ -55,29 +55,29 @@ export const Timeline = () => {
               className="flex gap-4"
             >
               <div className="flex flex-col items-center">
-                <div className="w-3 h-3 bg-primary rounded-full" />
+                <div className="w-2 h-2 bg-primary rounded-full" />
                 <div className="w-0.5 h-full bg-border" />
               </div>
-              <div className="flex-1 pb-8">
-                <div className="bg-card dark:bg-card backdrop-blur-sm rounded-lg p-6 border border-border">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div className="flex-1 pb-6">
+                <div className="bg-card dark:bg-card backdrop-blur-sm rounded-lg p-4 border border-border">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                     <div className="flex items-center gap-3">
-                      <Avatar className="h-10 w-10">
+                      <Avatar className="h-8 w-8">
                         <AvatarImage src={item.logo} alt={`${item.company} logo`} />
                         <AvatarFallback>{item.company[0]}</AvatarFallback>
                       </Avatar>
                       <div>
-                        <h3 className="text-xl font-semibold text-foreground">{item.company}</h3>
-                        <div className="text-primary font-medium">{item.title}</div>
-                        <div className="text-sm text-muted-foreground">{item.division}</div>
+                        <h3 className="text-lg font-semibold text-foreground">{item.company}</h3>
+                        <div className="text-primary text-sm font-medium">{item.title}</div>
+                        <div className="text-xs text-muted-foreground">{item.division}</div>
                       </div>
                     </div>
                     <div className="flex flex-col items-start md:items-end mt-2 md:mt-0">
-                      <div className="text-sm text-primary font-medium">{item.year}</div>
-                      <div className="text-sm text-muted-foreground">{item.location}</div>
+                      <div className="text-xs text-primary font-medium">{item.year}</div>
+                      <div className="text-xs text-muted-foreground">{item.location}</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
               </div>
             </motion.div>
