@@ -7,7 +7,7 @@ export const ScrapbookFrames = () => {
         initial={{ rotate: -5, scale: 0.9, opacity: 0 }}
         animate={{ rotate: -5, scale: 1, opacity: 0.8 }}
         transition={{ duration: 0.5 }}
-        className="absolute top-12 -left-4 w-48 aspect-square bg-white p-3 shadow-lg rounded-sm"
+        className="absolute top-12 -left-12 w-48 aspect-square bg-white p-3 shadow-lg rounded-sm"
       >
         <div className="w-full h-full bg-blue-50 rounded-sm flex items-center justify-center text-blue-300">
           Picture 1
@@ -18,7 +18,7 @@ export const ScrapbookFrames = () => {
         initial={{ rotate: 5, scale: 0.9, opacity: 0 }}
         animate={{ rotate: 5, scale: 1, opacity: 0.8 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="absolute top-24 -right-4 w-56 aspect-[3/4] bg-white p-3 shadow-lg rounded-sm"
+        className="absolute top-24 -right-12 w-56 aspect-[3/4] bg-white p-3 shadow-lg rounded-sm"
       >
         <div className="w-full h-full bg-blue-50 rounded-sm flex items-center justify-center text-blue-300">
           Picture 2
@@ -29,10 +29,21 @@ export const ScrapbookFrames = () => {
         initial={{ rotate: -3, scale: 0.9, opacity: 0 }}
         animate={{ rotate: -3, scale: 1, opacity: 0.8 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="absolute bottom-12 left-1/4 w-64 aspect-[16/9] bg-white p-3 shadow-lg rounded-sm"
+        className="absolute bottom-24 left-1/4 w-64 aspect-[16/9] bg-white p-3 shadow-lg rounded-sm"
       >
         <div className="w-full h-full bg-blue-50 rounded-sm flex items-center justify-center text-blue-300">
           Picture 3
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ rotate: 4, scale: 0.9, opacity: 0 }}
+        animate={{ rotate: 4, scale: 1, opacity: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="absolute bottom-12 right-1/4 w-52 aspect-square bg-white p-3 shadow-lg rounded-sm"
+      >
+        <div className="w-full h-full bg-blue-50 rounded-sm flex items-center justify-center text-blue-300">
+          Picture 4
         </div>
       </motion.div>
     </div>
