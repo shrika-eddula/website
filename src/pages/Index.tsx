@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { Navigation } from "@/components/Navigation";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ScrapbookFrames } from "@/components/ScrapbookFrames";
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
         <ThemeToggle />
       </div>
       <Hero />
+      <ScrapbookFrames />
     </div>
   );
 };
