@@ -8,7 +8,7 @@ const timelineItems = [
     title: "Software Engineering Intern",
     division: "Vision Products Group",
     location: "Seattle, WA",
-    description: "Prototyped Human Computer Interfaces for the R&D wing, leveraging AI and augmented reality to develop revolutionary experiences.",
+    description: "Prototyped Human Computer Interfaces for the R&D wing, leveraging AI and augmented reality to develop revolutionary experiences",
     logo: "/apple.png"
   },
   {
@@ -17,7 +17,7 @@ const timelineItems = [
     title: "Undergraduate Researcher",
     division: "Camera Culture Group",
     location: "Boston, MA",
-    description: "Reconstructed 3D models from satellite imagery using Neural Radiance Fields (NeRF) for handling complex lighting and shadow challenges.",
+    description: "Reconstructed 3D models from satellite imagery using Neural Radiance Fields (NeRF) for handling complex lighting and shadow challenges",
     logo: "/mit.png"
   },
   {
@@ -26,7 +26,7 @@ const timelineItems = [
     title: "Machine Learning Intern",
     division: "Embedded Machine Learning",
     location: "Natik, MA",
-    description: "Designed autonomous drone device for battlefield consciousness assessment using Glasgow Coma Scale with tinyML algorithms.",
+    description: "Designed autonomous drone device for battlefield consciousness assessment using Glasgow Coma Scale with tinyML algorithms",
     logo: "/army.png"
   },
   {
@@ -35,7 +35,7 @@ const timelineItems = [
     title: "Undergraduate Researcher & Lab Manager",
     division: "Computational Chemistry",
     location: "Dallas, TX",
-    description: "Led computational chemistry research on toxin/pollutant adsorption prediction, resulting in 12 publications.",
+    description: "Led computational chemistry research on toxin/pollutant adsorption prediction, resulting in 12 publications",
     logo: "/unt.png"
   }
 ];
