@@ -25,7 +25,7 @@ export const Navigation = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink 
-                  href="#about"
+                  href="/#about"
                   className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   About
@@ -33,7 +33,7 @@ export const Navigation = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink 
-                  href="#projects"
+                  href="/#projects"
                   className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   Projects
@@ -41,7 +41,7 @@ export const Navigation = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink 
-                  href="#writing"
+                  href="/#writing"
                   className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   Writing
