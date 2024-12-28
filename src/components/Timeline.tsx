@@ -1,48 +1,43 @@
 import { motion } from "framer-motion";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const timelineItems = [
   {
-    year: "2024",
-    title: "ML Software Engineering Intern",
-    company: "Apple | Vision Products Group",
+    year: "June 2024 – August 2024",
+    company: "Apple",
+    title: "Software Engineering Intern",
+    division: "Vision Products Group",
     location: "Seattle, WA",
-    description: "Prototyped Human Computer Interfaces for the R&D wing, leveraging AI and augmented reality to develop revolutionary experiences blending digital content with physical space. Developed an entirely new application paradigm requiring rapid experimentation and prototyping.",
+    description: "Prototyped Human Computer Interfaces for the R&D wing, leveraging AI and augmented reality to develop revolutionary experiences. Developed an entirely new application paradigm requiring rapid experimentation and prototyping.",
+    logo: "/apple-logo.svg"
   },
   {
-    year: "2023-2024",
+    year: "April 2023 – June 2024",
+    company: "MIT Media Lab",
     title: "Undergraduate Researcher",
-    company: "MIT Media Lab | Camera Culture Group",
+    division: "Camera Culture Group",
     location: "Boston, MA",
     description: "Reconstructed 3D models from satellite imagery using Neural Radiance Fields (NeRF). Developed Eulerian Video Magnification + Senior Fusion approach for forest fire prediction.",
+    logo: "/mit-logo.svg"
   },
   {
-    year: "2023",
-    title: "Machine Learning Intern",
+    year: "June 2023 – August 2023",
     company: "United States Army",
+    title: "Machine Learning Intern",
+    division: "Embedded Machine Learning",
     location: "Natik, MA",
     description: "Designed autonomous drone device for battlefield consciousness assessment using Glasgow Coma Scale. Implemented tinyML algorithms with pose detection, computer vision, and NLP for real-time processing on Nvidia Jetson Nano.",
+    logo: "/army-logo.svg"
   },
   {
-    year: "2022",
-    title: "Software Engineering Intern",
-    company: "Sectra Inc | Medical Imaging IT Cybersecurity",
-    location: "Shelton, CT",
-    description: "Developed real-time server monitoring across global hospital networks and led patient data migration to SecureLink platform. Built automated solution for helpdesk ticket backlogs.",
-  },
-  {
-    year: "2021-2022",
-    title: "Software Engineering Intern",
-    company: "avoMD | HealthTech Startup",
-    location: "Brooklyn, NY",
-    description: "Developed LLM pipeline for document automation and medical decision-making. Engineered analytics dashboards via Mixpanel and implemented user onboarding through Google Scripts.",
-  },
-  {
-    year: "2019-2022",
-    title: "Undergraduate Researcher & Lab Manager",
+    year: "May 2019 – February 2022",
     company: "University of North Texas",
+    title: "Undergraduate Researcher & Lab Manager",
+    division: "Computational Chemistry",
     location: "Dallas, TX",
     description: "Led computational chemistry research on toxin/pollutant adsorption prediction. Managed lab operations, mentored students, and published first-authored paper.",
-  },
+    logo: "/unt-logo.svg"
+  }
 ];
 
 export const Timeline = () => {
@@ -65,10 +60,17 @@ export const Timeline = () => {
               </div>
               <div className="flex-1 pb-8">
                 <div className="bg-card dark:bg-card backdrop-blur-sm rounded-lg p-6 border border-border">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                      <div className="text-primary font-medium">{item.company}</div>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-10 w-10">
+                        <AvatarImage src={item.logo} alt={`${item.company} logo`} />
+                        <AvatarFallback>{item.company[0]}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground">{item.company}</h3>
+                        <div className="text-primary font-medium">{item.title}</div>
+                        <div className="text-sm text-muted-foreground">{item.division}</div>
+                      </div>
                     </div>
                     <div className="flex flex-col items-start md:items-end mt-2 md:mt-0">
                       <div className="text-sm text-primary font-medium">{item.year}</div>
