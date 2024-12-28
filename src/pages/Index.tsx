@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="bg-background dark:bg-background min-h-screen">
       <Navigation />
-      <div className="fixed top-20 right-8 z-40">
+      <div className="fixed top-20 right-6 z-40 scale-115">
         <ThemeToggle />
       </div>
       <Hero />
