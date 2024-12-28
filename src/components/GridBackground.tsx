@@ -4,7 +4,7 @@ import { useFrame, Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
 function Grid() {
-  const gridRef = useRef<THREE.GridHelper>();
+  const gridRef = useRef<THREE.GridHelper>(null);
   const mousePosition = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -21,23 +21,24 @@ function Grid() {
 
   useFrame(() => {
     if (gridRef.current) {
-      // Adjust grid position based on mouse movement
       gridRef.current.position.y = -2 + mousePosition.current.y * 0.5;
       gridRef.current.rotation.x = 1.5 + mousePosition.current.y * 0.05;
     }
   });
 
   return (
-    <>
+    <group>
       <gridHelper
         ref={gridRef}
-        args={[30, 30, '#4338ca', '#4338ca']}
+        args={[30, 30]}
         position={[0, -2, 0]}
         rotation={[1.5, 0, 0]}
-      />
+      >
+        <meshBasicMaterial attach="material" color="#4338ca" opacity={0.2} transparent />
+      </gridHelper>
       <ambientLight intensity={0.1} />
       <directionalLight position={[5, 5, 5]} intensity={0.5} />
-    </>
+    </group>
   );
 }
 
