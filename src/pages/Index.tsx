@@ -10,8 +10,10 @@ const Index = () => {
       <div className="fixed top-20 right-4 z-40 scale-125">
         <ThemeToggle />
       </div>
-      <Hero />
-      <ScrapbookFrames />
+      <div className="relative">
+        <ScrapbookFrames />
+        <Hero />
+      </div>
     </div>
   );
 };
