@@ -12,9 +12,9 @@ const timelineItems = [
 
 export const Timeline = () => {
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-sky-50/30" id="about">
+    <section className="py-16 px-4 bg-background dark:bg-background" id="about">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-gray-900">My Journey</h2>
+        <h2 className="text-3xl font-bold mb-8 text-foreground">My Journey</h2>
         <div className="space-y-8">
           {timelineItems.map((item, index) => (
             <motion.div
@@ -25,14 +25,14 @@ export const Timeline = () => {
               className="flex gap-4"
             >
               <div className="flex flex-col items-center">
-                <div className="w-3 h-3 bg-sky-600 rounded-full" />
-                <div className="w-0.5 h-full bg-sky-100" />
+                <div className="w-3 h-3 bg-primary rounded-full" />
+                <div className="w-0.5 h-full bg-border" />
               </div>
-              <div className="flex-1 pb-8 bg-gray-50/50 backdrop-blur-sm rounded-lg p-4 border border-gray-100">
-                <div className="text-sm text-sky-600 font-medium mb-1">{item.year}</div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-                <div className="text-gray-700 mb-2">{item.company}</div>
-                <p className="text-gray-600">{item.description}</p>
+              <div className="flex-1 pb-8 bg-card dark:bg-card backdrop-blur-sm rounded-lg p-4 border border-border">
+                <div className="text-sm text-primary font-medium mb-1">{item.year}</div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h3>
+                <div className="text-foreground/80 mb-2">{item.company}</div>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             </motion.div>
           ))}
