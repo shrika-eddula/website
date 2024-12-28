@@ -5,7 +5,7 @@ import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
   return (
-    <div className="bg-white pt-16">
+    <div className="bg-gray-50">
       <Navigation />
       <Hero />
       <Projects />
