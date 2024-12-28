@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter, Instagram } from "lucide-react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { ThemeToggle } from "./ThemeToggle";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const socialLinks = [
@@ -24,20 +25,20 @@ export const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink 
-                  href="/#about"
+                <Link 
+                  to="/"
                   className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   About
-                </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink 
-                  href="/#projects"
+                <Link 
+                  to="/projects"
                   className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   Projects
-                </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink 
