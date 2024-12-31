@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center px-4 bg-background dark:bg-background mt-32 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center px-4 py-16 bg-background dark:bg-background overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 opacity-50" />
       
@@ -22,50 +22,86 @@ export const Hero = () => {
         />
       </div>
 
-      <div className="relative max-w-3xl mx-auto text-center z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
-        >
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold tracking-tight"
-          >
-            <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
-              Hi, I'm Shrika Eddula
-            </span>
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-4 text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto"
-          >
-            A passionate software engineer focused on creating impactful solutions through elegant code.
-          </motion.p>
+      <div className="relative max-w-4xl mx-auto z-10 w-full">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
+          {/* Left content */}
+          <div className="flex-1 space-y-6">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold tracking-tight text-left"
+            >
+              <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
+                Shrika Eddula
+              </span>
+            </motion.h1>
+            
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="prose prose-lg dark:prose-invert max-w-none space-y-4 text-left"
+            >
+              <p>
+                Hi! I am a software engineer at Microsoft, working on the Azure team. Previously, I worked at Amazon
+                as an SDE and graduated from the University of Washington with a B.S. in Computer Science.
+              </p>
+              
+              <p>
+                My work focuses on developing scalable cloud solutions and improving developer experiences. I am passionate about
+                creating efficient, maintainable systems that solve real-world problems.
+              </p>
 
+              <p>
+                I enjoy tackling complex technical challenges and finding elegant solutions through careful system design
+                and implementation. My experience spans across cloud infrastructure, distributed systems, and web development.
+              </p>
+
+              <div className="mt-4 space-y-2">
+                <p className="font-semibold">Contact Information:</p>
+                <p>Email: shrika.eddula@example.com</p>
+                <p>Location: Seattle, WA</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex gap-4 pt-4"
+            >
+              <a 
+                href="/projects" 
+                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-2"
+              >
+                View Projects
+              </a>
+              <a 
+                href="/resume" 
+                className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-2"
+              >
+                Resume
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Right content - Profile Image */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex gap-4 justify-center mt-8"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="lg:w-1/3"
           >
-            <a 
-              href="/projects" 
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-2"
-            >
-              View Projects
-            </a>
-            <a 
-              href="/resume" 
-              className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-2"
-            >
-              Resume
-            </a>
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg shadow-xl">
+              <img 
+                src="/lovable-uploads/050be7fb-6f18-49f7-907f-a3df3179f383.png"
+                alt="Profile"
+                className="object-cover w-full h-full"
+              />
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
