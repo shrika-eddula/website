@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center px-4 py-16 bg-background dark:bg-background overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center px-4 pt-32 pb-16 bg-background dark:bg-background overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 opacity-50" />
       
@@ -44,24 +44,26 @@ export const Hero = () => {
               className="prose prose-lg dark:prose-invert max-w-none space-y-4 text-left"
             >
               <p>
-                Hi! I am a software engineer at Microsoft, working on the Azure team. Previously, I worked at Amazon
-                as an SDE and graduated from the University of Washington with a B.S. in Computer Science.
+                Hi! I'm a student at MIT studying CS, AI, Math, and Business. This past summer, I was a ML SWE Intern
+                at Apple's Vision Products Group, working on cutting-edge R&D projects.
               </p>
               
               <p>
-                My work focuses on developing scalable cloud solutions and improving developer experiences. I am passionate about
-                creating efficient, maintainable systems that solve real-world problems.
+                As a published researcher with 9 papers in international peer-reviewed journals and a Barry M. Goldwater Scholar,
+                I've worked on diverse projects from quantum chemistry to affective computing at the MIT Media Lab.
+                Currently, I'm developing an ML-powered system for optimizing caffeine delivery using biosignal data.
               </p>
 
               <p>
-                I enjoy tackling complex technical challenges and finding elegant solutions through careful system design
-                and implementation. My experience spans across cloud infrastructure, distributed systems, and web development.
+                I'm passionate about building impactful products, from developing an autonomous drone device for the US Army
+                to creating VLM solutions for semantic search in drone and satellite imagery. As the president of AI @ MIT,
+                I lead a vibrant community of over 300 members, fostering innovation and collaboration in AI.
               </p>
 
               <div className="mt-4 space-y-2">
                 <p className="font-semibold">Contact Information:</p>
                 <p>Email: shrika.eddula@example.com</p>
-                <p>Location: Seattle, WA</p>
+                <p>Location: Cambridge, MA</p>
               </div>
             </motion.div>
 
