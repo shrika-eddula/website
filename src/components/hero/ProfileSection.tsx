@@ -22,7 +22,7 @@ export const ProfileSection = () => (
       className="mt-6 space-y-2 text-left"
     >
       <p className="font-semibold">Contact Information:</p>
-      <p>Email: shrika@mit.edu</p>
+      <p>Email: shrika [at] mit [dot] edu</p>
       <p>Currently: Cambridge, MA</p>
     </motion.div>
   </motion.div>
