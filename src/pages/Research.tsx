@@ -90,7 +90,7 @@ const Research = () => {
                     className="w-full h-full object-cover rounded-lg border"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 flex-grow">
                   <h2 className="text-lg font-semibold">{publication.title}</h2>
                   <p className="text-muted-foreground">
                     {publication.authors.map((author, authorIndex) => (
@@ -106,7 +106,7 @@ const Research = () => {
                   <p className="text-sm text-muted-foreground">
                     {publication.date}
                   </p>
-                  <div className="flex gap-2 pt-2">
+                  <div className="flex justify-end pt-2">
                     {publication.links.map((link, linkIndex) => (
                       <a
                         key={linkIndex}
