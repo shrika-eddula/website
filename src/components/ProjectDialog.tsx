@@ -20,7 +20,6 @@ interface ProjectDialogProps {
       github?: string;
       paper?: string;
       slides?: string;
-      presentation?: string;
     };
   };
 }
@@ -84,14 +83,6 @@ export const ProjectDialog = ({ open, onOpenChange, project }: ProjectDialogProp
                 <a href={project.links.slides} target="_blank" rel="noopener noreferrer">
                   <Presentation className="mr-2" />
                   Slides
-                </a>
-              </Button>
-            )}
-            {project.links?.presentation && (
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.links.presentation} target="_blank" rel="noopener noreferrer">
-                  <Presentation className="mr-2" />
-                  Presentation
                 </a>
               </Button>
             )}
