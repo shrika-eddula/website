@@ -4,15 +4,13 @@ import { ProjectDialog } from "./ProjectDialog";
 
 const projects = [
   {
-    title: "Project 1",
-    description: "Description of project 1",
-    tags: ["React", "TypeScript", "Node.js"],
+    title: "SculptFormer",
+    description: "Transformer Boosted 3D Mesh Reconstruction from a Single 2D Image",
+    tags: ["Transformers", "Computer Vision", "3D Reconstruction"],
     image: "/placeholder.svg",
     links: {
-      github: "https://github.com",
-      paper: "https://example.com/paper",
-      slides: "https://example.com/slides",
-      presentation: "https://example.com/presentation"
+      github: "https://github.com/evnkm/SculptFormer",
+      // Paper and slides links will be added later
     }
   },
   // Add more projects here
