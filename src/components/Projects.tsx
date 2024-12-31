@@ -8,9 +8,11 @@ const projects = [
     description: "Transformer Boosted 3D Mesh Reconstruction from a Single 2D Image",
     tags: ["Transformers", "Computer Vision", "3D Reconstruction"],
     image: "/placeholder.svg",
+    video: "https://www.youtube.com/watch?v=bId7TcPZsIA",
     links: {
       github: "https://github.com/evnkm/SculptFormer",
-      // Paper and slides links will be added later
+      paper: "#", // Placeholder for PDF
+      slides: "#" // Placeholder for PDF
     }
   },
   // Add more projects here
