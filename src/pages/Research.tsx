@@ -96,7 +96,6 @@ const Research = () => {
                     {publication.authors.map((author, authorIndex) => (
                       <span key={authorIndex}>
                         {author.name}
-                        {author.isEqual && "*"}
                         {authorIndex < publication.authors.length - 1 && ", "}
                       </span>
                     ))}
