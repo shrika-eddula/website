@@ -1,27 +1,61 @@
 import { Navigation } from "@/components/Navigation";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
-const researchProjects = [
+const publications = [
   {
-    title: "Machine Learning for Medical Imaging",
-    description: "Developed deep learning models for medical image analysis, focusing on early disease detection using computer vision techniques.",
-    technologies: ["PyTorch", "TensorFlow", "Computer Vision", "Deep Learning"],
-    impact: "Improved disease detection accuracy by 25%"
+    title: "Generative Flows on Discrete State-Spaces: Enabling Multimodal Flows with Applications to Protein Co-Design",
+    authors: [
+      { name: "Andrew Campbell", isEqual: true },
+      { name: "Jason Yim", isEqual: true },
+      { name: "Regina Barzilay" },
+      { name: "Tom Rainforth" },
+      { name: "Tommi Jaakkola" }
+    ],
+    conference: "International Conference on Machine Learning",
+    date: "July 21, 2024",
+    links: [
+      { label: "PAPER", url: "#" },
+      { label: "CODE", url: "#" }
+    ],
+    image: "/placeholder.svg"
   },
   {
-    title: "Natural Language Processing in Healthcare",
-    description: "Created NLP models to analyze medical records and extract key clinical information for better patient care.",
-    technologies: ["NLP", "BERT", "Python", "Healthcare Analytics"],
-    impact: "Reduced manual review time by 60%"
+    title: "Diffusion models in protein structure and docking",
+    authors: [
+      { name: "Jason Yim" },
+      { name: "Hannes Stärk" },
+      { name: "Gabriele Corso" },
+      { name: "Bowen Jing" },
+      { name: "Regina Barzilay" },
+      { name: "Tommi S Jaakkola" }
+    ],
+    conference: "Wiley Interdisciplinary Reviews: Computational Molecular Science",
+    date: "Apr 5, 2024",
+    links: [
+      { label: "PAPER", url: "#" }
+    ],
+    image: "/placeholder.svg"
   },
   {
-    title: "Robotics and Automation",
-    description: "Designed and implemented autonomous navigation systems for robotic applications in healthcare settings.",
-    technologies: ["ROS", "C++", "Robotics", "Sensor Fusion"],
-    impact: "Successfully deployed in 3 hospitals"
+    title: "Improving protein optimization with smoothed fitness landscapes",
+    authors: [
+      { name: "Andrew Kirjner", isEqual: true },
+      { name: "Jason Yim", isEqual: true },
+      { name: "Raman Samusevich" },
+      { name: "Shahar Bracha" },
+      { name: "Tommi Jaakkola" },
+      { name: "Regina Barzilay" },
+      { name: "Ila Fiete" }
+    ],
+    conference: "International Conference on Learning Representations",
+    date: "May 7, 2024",
+    links: [
+      { label: "PAPER", url: "#" },
+      { label: "CODE", url: "#" },
+      { label: "NEWS", url: "#" }
+    ],
+    image: "/placeholder.svg"
   }
 ];
 
@@ -33,50 +67,66 @@ const Research = () => {
         <ThemeToggle />
       </div>
       <div className="pt-24 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold mb-8 text-center"
+            className="text-4xl font-bold mb-4 text-center"
           >
-            Research Projects
+            Publications
           </motion.h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {researchProjects.map((project, index) => (
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center text-muted-foreground mb-8"
+          >
+            * denotes equal contribution
+          </motion.p>
+          <div className="space-y-12">
+            {publications.map((publication, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex gap-6"
               >
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">{project.description}</p>
-                    <div className="space-y-4">
-                      <div>
-                        <h3 className="font-semibold text-sm text-primary mb-2">Technologies</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <Badge
-                              key={techIndex}
-                              variant="secondary"
-                              className="bg-accent text-accent-foreground"
-                            >
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-sm text-primary mb-2">Impact</h3>
-                        <p className="text-sm text-muted-foreground">{project.impact}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="w-32 h-32 shrink-0">
+                  <img
+                    src={publication.image}
+                    alt={publication.title}
+                    className="w-full h-full object-cover rounded-lg border"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h2 className="text-lg font-semibold">{publication.title}</h2>
+                  <p className="text-muted-foreground">
+                    {publication.authors.map((author, authorIndex) => (
+                      <span key={authorIndex}>
+                        {author.name}
+                        {author.isEqual && "*"}
+                        {authorIndex < publication.authors.length - 1 && ", "}
+                      </span>
+                    ))}
+                  </p>
+                  <p className="text-sm italic text-muted-foreground">
+                    {publication.conference}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {publication.date}
+                  </p>
+                  <div className="flex gap-2 pt-2">
+                    {publication.links.map((link, linkIndex) => (
+                      <a
+                        key={linkIndex}
+                        href={link.url}
+                        className="inline-block px-3 py-1 text-xs border rounded hover:bg-accent transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
