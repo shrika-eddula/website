@@ -53,8 +53,7 @@ const publications = [
     date: "May 7, 2024",
     links: [
       { label: "PAPER", url: "#" },
-      { label: "CODE", url: "#" },
-      { label: "NEWS", url: "#" }
+      { label: "CODE", url: "#" }
     ],
     image: "/placeholder.svg"
   }
