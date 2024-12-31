@@ -91,7 +91,20 @@ const Research = () => {
                   />
                 </div>
                 <div className="space-y-2 flex-grow">
-                  <h2 className="text-lg font-semibold">{publication.title}</h2>
+                  <div className="flex justify-between items-start">
+                    <h2 className="text-lg font-semibold">{publication.title}</h2>
+                    <div className="ml-4 shrink-0">
+                      {publication.links.map((link, linkIndex) => (
+                        <a
+                          key={linkIndex}
+                          href={link.url}
+                          className="inline-block px-3 py-1 text-xs border rounded hover:bg-accent transition-colors"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                   <p className="text-muted-foreground">
                     {publication.authors.map((author, authorIndex) => (
                       <span key={authorIndex}>
@@ -106,17 +119,6 @@ const Research = () => {
                   <p className="text-sm text-muted-foreground">
                     {publication.date}
                   </p>
-                  <div className="flex justify-end pt-2">
-                    {publication.links.map((link, linkIndex) => (
-                      <a
-                        key={linkIndex}
-                        href={link.url}
-                        className="inline-block px-3 py-1 text-xs border rounded hover:bg-accent transition-colors"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                  </div>
                 </div>
               </motion.div>
             ))}
