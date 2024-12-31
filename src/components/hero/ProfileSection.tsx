@@ -23,7 +23,7 @@ export const ProfileSection = () => (
     >
       <p className="font-semibold">Contact Information:</p>
       <p>Email: shrika [at] mit [dot] edu</p>
-      <p>Currently: Cambridge, MA</p>
+      <p>Currently: Cambridge, MA 📍</p>
     </motion.div>
   </motion.div>
 );
