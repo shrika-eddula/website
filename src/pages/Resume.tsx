@@ -26,11 +26,10 @@ const skillCategories = [
 
 const honors = [
   "Y Combinator Startup Challenge 2nd Place",
-  "Published Researcher: 1st author of 1 & co-author of 8 papers",
   "Barry M. Goldwater Scholar",
   "International Science & Engineering Fair (ISEF) Finalist",
   "United States National Chemistry Olympiad Semifinalist",
-  "Summer Research Scholarship ($15K in research grants)",
+  "$15K in research grants",
   "ICDC (International DECA Finalist)",
 ];
 
