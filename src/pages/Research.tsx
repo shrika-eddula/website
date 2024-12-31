@@ -103,7 +103,7 @@ const Research = () => {
                   <p className="text-sm italic text-muted-foreground">
                     {publication.conference}
                   </p>
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
                     <p className="text-sm text-muted-foreground">
                       {publication.date}
                     </p>
