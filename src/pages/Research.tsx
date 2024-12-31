@@ -4,19 +4,21 @@ import { motion } from "framer-motion";
 
 const publications = [
   {
-    title: "Generative Flows on Discrete State-Spaces: Enabling Multimodal Flows with Applications to Protein Co-Design",
+    title: "Abraham solvation parameter model: updated correlations for describing solute partitioning into plant cuticles from water and from air",
     authors: [
-      { name: "Andrew Campbell", isEqual: true },
-      { name: "Jason Yim", isEqual: true },
-      { name: "Regina Barzilay" },
-      { name: "Tom Rainforth" },
-      { name: "Tommi Jaakkola" }
+      { name: "Shrika Eddula" },
+      { name: "Angelina Xu" },
+      { name: "Carina Jiang" },
+      { name: "Jennifer Huang" },
+      { name: "Priya Tirumala" },
+      { name: "Grace Liu" },
+      { name: "William E. Acree" },
+      { name: "Michael H. Abraham" }
     ],
-    conference: "International Conference on Machine Learning",
-    date: "July 21, 2024",
+    conference: "Physics and Chemistry of Liquids",
+    date: "August 24, 2020",
     links: [
-      { label: "PAPER", url: "#" },
-      { label: "CODE", url: "#" }
+      { label: "PAPER", url: "https://www.tandfonline.com/doi/full/10.1080/00319104.2020.1808659" }
     ],
     image: "/placeholder.svg"
   },
