@@ -18,7 +18,7 @@ export const Hero = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold tracking-tight text-left"
             >
-              <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
+              <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400">
                 Shrika Eddula
               </span>
             </motion.h1>
