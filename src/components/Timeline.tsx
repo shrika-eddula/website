@@ -12,25 +12,8 @@ export const Timeline = () => {
         <h1 className="text-4xl font-bold mb-4">Shrika Eddula</h1>
         <div className="text-muted-foreground">
           <p>shrika@mit.edu | Cambridge, MA</p>
-          <p><a href="https://shrikaeddula.com" className="text-primary hover:underline">shrikaeddula.com</a></p>
         </div>
       </motion.div>
-
-      {/* Education Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="mb-12"
-      >
-        <h2 className="text-2xl font-bold mb-4 border-b pb-2">Education</h2>
-        <div className="ml-4">
-          <h3 className="text-xl font-semibold">Massachusetts Institute of Technology (MIT)</h3>
-          <p className="text-muted-foreground">Double Major in Computer Science/AI (6-4) and Mathematics (8)</p>
-          <p className="text-muted-foreground">GPA: 4.7/5.0 | Expected June 2026</p>
-          <p className="mt-2"><span className="font-semibold">Relevant Coursework:</span> Data Structures & Algorithms, Software Construction, Computer Vision, Machine Learning, Computation Structures, Probability, Fundamentals of Programming, Discrete Math, Deep Learning, Linear Algebra, Differential Equations</p>
-        </div>
-      </motion.section>
 
       {/* Work Experience Section */}
       <motion.section 
@@ -132,27 +115,6 @@ export const Timeline = () => {
           <li>Summer Research Scholarship: Awarded $10K in funding</li>
           <li>ICDC (International DECA Finalist)</li>
         </ul>
-      </motion.section>
-
-      {/* Leadership Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.0 }}
-      >
-        <h2 className="text-2xl font-bold mb-4 border-b pb-2">Leadership</h2>
-        <div className="ml-4 space-y-4">
-          <div>
-            <h3 className="text-xl font-semibold">AI @ MIT</h3>
-            <p className="text-muted-foreground">President | June 2023 – Present</p>
-            <p>Community of hackers at MIT building innovative projects to bring cutting-edge artificial intelligence techniques to others</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">MIT Women Business Leaders</h3>
-            <p className="text-muted-foreground">Head Of New Member Education | January 2023 – Present</p>
-            <p>Develop and teach curriculum in entrepreneurship for new members; Host and organize guest speaker panels</p>
-          </div>
-        </div>
       </motion.section>
     </div>
   );
