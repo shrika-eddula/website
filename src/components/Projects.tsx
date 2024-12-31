@@ -15,7 +15,72 @@ const projects = [
       slides: "#" // Placeholder for PDF
     }
   },
-  // Add more projects here
+  {
+    title: "Project 2",
+    description: "Description for Project 2",
+    tags: ["Tag 1", "Tag 2", "Tag 3"],
+    image: "/placeholder.svg",
+    links: {
+      github: "#",
+      paper: "#",
+      slides: "#"
+    }
+  },
+  {
+    title: "Project 3",
+    description: "Description for Project 3",
+    tags: ["Tag 1", "Tag 2", "Tag 3"],
+    image: "/placeholder.svg",
+    links: {
+      github: "#",
+      paper: "#",
+      slides: "#"
+    }
+  },
+  {
+    title: "Project 4",
+    description: "Description for Project 4",
+    tags: ["Tag 1", "Tag 2", "Tag 3"],
+    image: "/placeholder.svg",
+    links: {
+      github: "#",
+      paper: "#",
+      slides: "#"
+    }
+  },
+  {
+    title: "Project 5",
+    description: "Description for Project 5",
+    tags: ["Tag 1", "Tag 2", "Tag 3"],
+    image: "/placeholder.svg",
+    links: {
+      github: "#",
+      paper: "#",
+      slides: "#"
+    }
+  },
+  {
+    title: "Project 6",
+    description: "Description for Project 6",
+    tags: ["Tag 1", "Tag 2", "Tag 3"],
+    image: "/placeholder.svg",
+    links: {
+      github: "#",
+      paper: "#",
+      slides: "#"
+    }
+  },
+  {
+    title: "Project 7",
+    description: "Description for Project 7",
+    tags: ["Tag 1", "Tag 2", "Tag 3"],
+    image: "/placeholder.svg",
+    links: {
+      github: "#",
+      paper: "#",
+      slides: "#"
+    }
+  }
 ];
 
 export const Projects = () => {
