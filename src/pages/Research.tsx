@@ -14,9 +14,8 @@ const publications = [
     ],
     conference: "International Conference on Machine Learning",
     date: "July 21, 2024",
-    doi: "10.1080/00319104.2020.1808659",
     links: [
-      { label: "PAPER", url: "https://doi.org/10.1080/00319104.2020.1808659" },
+      { label: "PAPER", url: "#" },
       { label: "CODE", url: "#" }
     ],
     image: "/placeholder.svg"
@@ -116,11 +115,6 @@ const Research = () => {
                   <p className="text-sm text-muted-foreground">
                     {publication.date}
                   </p>
-                  {publication.doi && (
-                    <p className="text-sm text-muted-foreground">
-                      DOI: {publication.doi}
-                    </p>
-                  )}
                   <div className="flex gap-2 pt-2">
                     {publication.links.map((link, linkIndex) => (
                       <a
