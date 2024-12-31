@@ -12,8 +12,7 @@ const publications = [
       { name: "Jennifer Huang" },
       { name: "Priya Tirumala" },
       { name: "Grace Liu" },
-      { name: "William E. Acree" },
-      { name: "Michael H. Abraham" }
+      { name: "William E. Acree" }
     ],
     conference: "Physics and Chemistry of Liquids",
     date: "August 24, 2020",
