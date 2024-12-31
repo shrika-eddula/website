@@ -91,20 +91,7 @@ const Research = () => {
                   />
                 </div>
                 <div className="space-y-2 flex-grow">
-                  <div className="flex justify-between items-start">
-                    <h2 className="text-lg font-semibold">{publication.title}</h2>
-                    <div className="ml-4 shrink-0">
-                      {publication.links.map((link, linkIndex) => (
-                        <a
-                          key={linkIndex}
-                          href={link.url}
-                          className="inline-block px-3 py-1 text-xs border rounded hover:bg-accent transition-colors"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
+                  <h2 className="text-lg font-semibold">{publication.title}</h2>
                   <p className="text-muted-foreground">
                     {publication.authors.map((author, authorIndex) => (
                       <span key={authorIndex}>
@@ -116,9 +103,22 @@ const Research = () => {
                   <p className="text-sm italic text-muted-foreground">
                     {publication.conference}
                   </p>
-                  <p className="text-sm text-muted-foreground">
-                    {publication.date}
-                  </p>
+                  <div className="flex justify-between items-center">
+                    <p className="text-sm text-muted-foreground">
+                      {publication.date}
+                    </p>
+                    <div className="shrink-0">
+                      {publication.links.map((link, linkIndex) => (
+                        <a
+                          key={linkIndex}
+                          href={link.url}
+                          className="inline-block px-3 py-1 text-xs border rounded hover:bg-accent transition-colors"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
