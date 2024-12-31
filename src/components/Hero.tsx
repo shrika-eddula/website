@@ -44,14 +44,21 @@ export const Hero = () => {
               className="prose prose-lg dark:prose-invert max-w-none space-y-4 text-left"
             >
               <p>
-                Hi! I'm a student at MIT studying CS, AI, Math, and Business. This past summer, I was a ML SWE Intern
-                at Apple's Vision Products Group, working on cutting-edge R&D projects.
+                It's a pleasure to meet you! I'm Shrika, a student at MIT studying CS, AI, Math, and Business.
+                This past summer, I was a ML SWE Intern on the R&D wing of Apple's Vision Products Group, and while most of my work
+                is under NDAs, I can say that there was a lot of rapid experimentation and prototyping involved!
               </p>
               
               <p>
-                As a published researcher with 9 papers in international peer-reviewed journals and a Barry M. Goldwater Scholar,
-                I've worked on diverse projects from quantum chemistry to affective computing at the MIT Media Lab.
-                Currently, I'm developing an ML-powered system for optimizing caffeine delivery using biosignal data.
+                One of my key achievements includes being a published researcher, with 9 papers in international peer-reviewed journals,
+                demonstrating my ability to contribute to cutting-edge research and development. I'm a recipient of the Barry M. Goldwater Scholar,
+                which recognizes exceptional undergraduate research in the fields of mathematics, science, and engineering.
+              </p>
+
+              <p>
+                My research interests are broad, spanning from quantum chemistry to affective computing at the MIT Media Lab.
+                Currently, I'm developing a closed-loop system that uses biosignal data to determine the optimal timing for caffeine delivery,
+                integrating ML models on wearable devices for real-time attention enhancement.
               </p>
 
               <p>
@@ -59,12 +66,6 @@ export const Hero = () => {
                 to creating VLM solutions for semantic search in drone and satellite imagery. As the president of AI @ MIT,
                 I lead a vibrant community of over 300 members, fostering innovation and collaboration in AI.
               </p>
-
-              <div className="mt-4 space-y-2">
-                <p className="font-semibold">Contact Information:</p>
-                <p>Email: shrika.eddula@example.com</p>
-                <p>Location: Cambridge, MA</p>
-              </div>
             </motion.div>
 
             <motion.div
@@ -102,6 +103,17 @@ export const Hero = () => {
                 className="object-cover w-full h-full"
               />
             </div>
+            
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-6 space-y-2 text-left"
+            >
+              <p className="font-semibold">Contact Information:</p>
+              <p>Email: shrika@mit.edu</p>
+              <p>Currently: Cambridge, MA</p>
+            </motion.div>
           </motion.div>
         </div>
       </div>
