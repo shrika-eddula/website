@@ -8,20 +8,19 @@ export const Bio = () => (
     className="prose prose-lg dark:prose-invert max-w-none space-y-4 text-left"
   >
     <p>
-      Hi! I'm a student at MIT studying CS, AI, Math, and Business. This past summer, I was a ML SWE Intern
-      at Apple's Vision Products Group, working on cutting-edge R&D projects.
+      Hi! I'm a junior at MIT studying CS + AI, Chemistry, and Business. This past summer, I was an intern at Apple's Vision Products Group, rapidly prototyping next-generation AR technologies.
     </p>
     
     <p>
-      As a published researcher with 9 papers in international peer-reviewed journals and a Barry M. Goldwater Scholar,
-      I've worked on diverse projects from quantum chemistry to affective computing at the MIT Media Lab.
-      Currently, I'm developing an ML-powered system for optimizing caffeine delivery using biosignal data.
+      As a published researcher with 12 papers in international peer-reviewed journals and a Barry M. Goldwater Scholar, I've worked on diverse projects from analytical chemistry to affective computing and computer vision. 
     </p>
 
     <p>
-      I'm passionate about building impactful products, from developing an autonomous drone device for the US Army
-      to creating VLM solutions for semantic search in drone and satellite imagery. As the president of AI @ MIT,
-      I lead a vibrant community of over 300 members, fostering innovation and collaboration in AI.
+      I'm passionate about building impactful products, from developing autonomous drone devices for the US Army, creating search solutions for drone and satellite imagery, and embedded devices to fix my laundry machine. I also currently serve as the president of AI @ MIT. 
+    </p>
+
+    <p>
+      At present, I'm building an AI copilot for chemical synthesis that combines intelligent Design of Experiments (DoE), robotic automation, and ML-driven optimization to democratize high-throughput experimentation for biochemical engineering. 
     </p>
   </motion.div>
 );
