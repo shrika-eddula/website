@@ -16,15 +16,11 @@ const skillCategories = [
   },
   {
     title: "Web Development",
-    skills: ["React", "Node.js", "HTML", "CSS", "SQL"],
+    skills: ["React", "Node.js", "HTML", "CSS"],
   },
   {
     title: "Tools & Platforms",
     skills: ["Git", "Linux", "AWS", "SageMaker", "Arduino", "Docker"],
-  },
-  {
-    title: "Libraries & Frameworks",
-    skills: ["NumPy", "Pandas", "scikit-learn", "OpenCV"],
   },
 ];
 
@@ -34,7 +30,7 @@ const honors = [
   "Barry M. Goldwater Scholar",
   "International Science & Engineering Fair (ISEF) Finalist",
   "United States National Chemistry Olympiad Semifinalist",
-  "Summer Research Scholarship ($10K)",
+  "Summer Research Scholarship ($15K in research grants)",
   "ICDC (International DECA Finalist)",
 ];
 
