@@ -47,14 +47,6 @@ export const Navigation = () => {
                   Resume
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink 
-                  href="/#writing"
-                  className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-                >
-                  Writing
-                </NavigationMenuLink>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
