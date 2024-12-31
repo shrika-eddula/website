@@ -41,8 +41,8 @@ const publications = [
   {
     title: "Improving protein optimization with smoothed fitness landscapes",
     authors: [
-      { name: "Andrew Kirjner", isEqual: true },
-      { name: "Jason Yim", isEqual: true },
+      { name: "Andrew Kirjner" },
+      { name: "Jason Yim" },
       { name: "Raman Samusevich" },
       { name: "Shahar Bracha" },
       { name: "Tommi Jaakkola" },
@@ -52,8 +52,7 @@ const publications = [
     conference: "International Conference on Learning Representations",
     date: "May 7, 2024",
     links: [
-      { label: "PAPER", url: "#" },
-      { label: "CODE", url: "#" }
+      { label: "PAPER", url: "#" }
     ],
     image: "/placeholder.svg"
   }
