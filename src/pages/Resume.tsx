@@ -42,7 +42,7 @@ const Resume = () => {
       </div>
       <div className="pt-24 px-4 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="space-y-6">
+          <div className="space-y-6 md:pt-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
