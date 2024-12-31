@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { ProjectDialog } from "./ProjectDialog";
 
 const projects = [
   {
@@ -6,11 +8,19 @@ const projects = [
     description: "Description of project 1",
     tags: ["React", "TypeScript", "Node.js"],
     image: "/placeholder.svg",
+    links: {
+      github: "https://github.com",
+      paper: "https://example.com/paper",
+      slides: "https://example.com/slides",
+      presentation: "https://example.com/presentation"
+    }
   },
   // Add more projects here
 ];
 
 export const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+
   return (
     <section className="py-24 px-4 bg-background dark:bg-background" id="projects">
       <div className="max-w-6xl mx-auto">
@@ -22,7 +32,8 @@ export const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card dark:bg-card backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-border"
+              className="bg-card dark:bg-card backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-border cursor-pointer"
+              onClick={() => setSelectedProject(project)}
             >
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-5">
@@ -40,6 +51,14 @@ export const Projects = () => {
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <ProjectDialog
+          open={!!selectedProject}
+          onOpenChange={(open) => !open && setSelectedProject(null)}
+          project={selectedProject}
+        />
+      )}
     </section>
   );
 };
