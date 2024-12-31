@@ -72,17 +72,10 @@ const Research = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold mb-4 text-center"
+            className="text-4xl font-bold mb-8 text-center"
           >
             Publications
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center text-muted-foreground mb-8"
-          >
-            * denotes equal contribution
-          </motion.p>
           <div className="space-y-12">
             {publications.map((publication, index) => (
               <motion.div
