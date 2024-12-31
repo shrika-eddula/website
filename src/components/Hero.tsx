@@ -10,8 +10,8 @@ export const Hero = () => {
       <BackgroundEffects />
 
       <div className="relative max-w-4xl mx-auto z-10 w-full">
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          <div className="flex-1 space-y-6">
+        <div className="flex flex-col lg:flex-row gap-8 items-start lg:items-center">
+          <div className="flex-1 space-y-6 lg:mt-16">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
