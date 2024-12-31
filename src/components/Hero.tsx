@@ -93,11 +93,11 @@ export const Hero = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="lg:w-1/3"
+            className="lg:w-1/3 mt-8 lg:mt-16"
           >
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg shadow-xl">
               <img 
-                src="/lovable-uploads/050be7fb-6f18-49f7-907f-a3df3179f383.png"
+                src="/lovable-uploads/2a1579bc-3846-4ae0-9e17-39859574adcc.png"
                 alt="Profile"
                 className="object-cover w-full h-full"
               />
