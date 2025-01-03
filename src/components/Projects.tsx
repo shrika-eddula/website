@@ -6,14 +6,15 @@ const projects = [
   {
     title: "SculptFormer",
     description: "Transformer Boosted 3D Mesh Reconstruction from a Single 2D Image",
-    tags: ["Transformers", "Computer Vision", "3D Reconstruction"],
-    image: "/placeholder.svg",
-    video: "https://www.youtube.com/watch?v=bId7TcPZsIA",
+    tags: ["Transformers", "Computer Vision", "3D Reconstruction", "Mesh"],
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    video: "https://www.youtube.com/embed/bId7TcPZsIA",
     links: {
       github: "https://github.com/evnkm/SculptFormer",
-      paper: "#", // Placeholder for PDF
-      slides: "#" // Placeholder for PDF
-    }
+      paper: "/content/SculptFormer/sculptformer.pdf",
+      slides: "/content/SculptFormer/sculptpres.pdf"
+    },
+    details: "This project was done over Spring 2024 alongside my good friend Evan for our computer vision class."
   },
   {
     title: "Project 2",
@@ -100,13 +101,20 @@ export const Projects = () => {
               className="bg-card dark:bg-card backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-border cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-48 object-cover" 
+              />
               <div className="p-5">
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 bg-secondary dark:bg-secondary text-secondary-foreground dark:text-secondary-foreground rounded-full text-sm font-medium">
+                    <span 
+                      key={tag} 
+                      className="px-3 py-1 bg-secondary dark:bg-secondary text-secondary-foreground dark:text-secondary-foreground rounded-full text-sm font-medium"
+                    >
                       {tag}
                     </span>
                   ))}
