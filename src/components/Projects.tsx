@@ -37,8 +37,7 @@ const projects = [
     video: "https://www.youtube.com/embed/your-video-id",
     links: {
       github: "https://github.com/your-username/conjure",
-      paper: "#",
-      slides: "#"
+      devpost: "https://devpost.com/software/conjure-mit",
     },
     details: "Conjure is a powerful tool developed during HackMIT that helps researchers and analysts extract meaningful insights from large collections of images. By combining computer vision with large language models, Conjure can process, analyze, and generate reports about visual patterns and trends in image datasets."
   },
