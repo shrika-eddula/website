@@ -32,7 +32,7 @@ const projects = [
   {
     title: "Conjure",
     description: "HackMIT project to retrieve actionable insights from large image datasets",
-    tags: ["Computer Vision", "LLMs", "Image Processing", "Data Analysis", "Python"],
+    tags: ["Computer Vision", "LLMs", "Image Processing"],
     image: "/content/images/conjure.jpeg",
     video: "https://www.youtube.com/embed/your-video-id",
     links: {
