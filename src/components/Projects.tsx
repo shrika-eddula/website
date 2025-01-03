@@ -7,7 +7,7 @@ const projects = [
     title: "SculptFormer",
     description: "Transformer Boosted 3D Mesh Reconstruction from a Single 2D Image",
     tags: ["Transformers", "Computer Vision", "3D Reconstruction", "Mesh"],
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    image: "/content/SculptFormer/sculptformer.png",
     video: "https://www.youtube.com/embed/bId7TcPZsIA",
     links: {
       github: "https://github.com/evnkm/SculptFormer",
