@@ -37,7 +37,7 @@ const projects = [
     video: "https://www.youtube.com/embed/your-video-id",
     links: {
       github: "https://github.com/your-username/conjure",
-      devpost: "https://devpost.com/software/conjure-mit",
+      devpost: "https://devpost.com/software/conjure-2tyhq5",
     },
     details: "Conjure is a powerful tool developed during HackMIT that helps researchers and analysts extract meaningful insights from large collections of images. By combining computer vision with large language models, Conjure can process, analyze, and generate reports about visual patterns and trends in image datasets."
   },
@@ -96,7 +96,7 @@ export const Projects = () => {
 
   const handleProjectClick = (project: typeof projects[0]) => {
     if (project.title === "Conjure") {
-      window.open("https://devpost.com/software/conjure-mit", "_blank");
+      window.open("https://devpost.com/software/conjure-2tyhq5", "_blank");
     } else {
       setSelectedProject(project);
     }
