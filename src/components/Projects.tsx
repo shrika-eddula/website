@@ -14,19 +14,6 @@ const projects = [
     details: "HierDTI is a novel architecture that integrates molecular graph-based learning and protein sequence encoding through cross-modality attention mechanisms. By bridging atomic-level molecular features with sequence-level protein data, this model aims to predict binding affinities with both precision and interpretability."
   },
   {
-    title: "SculptFormer",
-    description: "Transformer Boosted 3D Mesh Reconstruction from a Single 2D Image",
-    tags: ["Transformers", "Computer Vision", "3D Reconstruction", "Mesh"],
-    image: "/content/SculptFormer/sculptformer.png",
-    video: "https://www.youtube.com/embed/bId7TcPZsIA",
-    links: {
-      github: "https://github.com/evnkm/SculptFormer",
-      paper: "/content/SculptFormer/sculptformer.pdf",
-      slides: "/content/SculptFormer/sculptpres.pdf"
-    },
-    details: "This project was done over Spring 2024 alongside my good friend Evan for our computer vision class."
-  },
-  {
     title: "BuddyMate",
     description: "ML project for US Army to detect consciousness of warfighters on battlefield",
     tags: ["OpenCV", "Speech Recognition", "Embedded ML", "Arduino", "LLM"],
@@ -38,6 +25,19 @@ const projects = [
       slides: "/content/BuddyMate/buddyPres.pdf"
     },
     details: "This project was done over the summer of 2023 for the United States Army. The task was to research and design a smartphone sized drone attachment that can remotely assess a wounded Warfighter's state of consciousness on the battlefield asper the Glasgow Coma Scale. Through a combination of computer vision and natural language processing, the approach integrates both AI and functional hardware components, such as optical, audio, and laser, in a semi-autonomous system as a tool for future Army Medics that can give vital insight into a wounded Warfighter's neurological state."
+  },
+  {
+    title: "SculptFormer",
+    description: "Transformer Boosted 3D Mesh Reconstruction from a Single 2D Image",
+    tags: ["Transformers", "Computer Vision", "3D Reconstruction", "Mesh"],
+    image: "/content/SculptFormer/sculptformer.png",
+    video: "https://www.youtube.com/embed/bId7TcPZsIA",
+    links: {
+      github: "https://github.com/evnkm/SculptFormer",
+      paper: "/content/SculptFormer/sculptformer.pdf",
+      slides: "/content/SculptFormer/sculptpres.pdf"
+    },
+    details: "This project was done over Spring 2024 alongside my good friend Evan for our computer vision class."
   },
   {
     title: "Conjure",
