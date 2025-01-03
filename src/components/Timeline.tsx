@@ -36,7 +36,7 @@ const timelineItems = [
     division: "Computational Chemistry",
     location: "Dallas, TX",
     description: "Led computational chemistry research on toxin/pollutant adsorption prediction, resulting in 12 publications",
-    logo: ""
+    logo: "/content/mit.png"
   }
 ];
 
@@ -63,17 +63,14 @@ export const Timeline = () => {
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                     <div className="flex items-center gap-3">
                       <Avatar className={`h-12 w-12 bg-background ${item.company === "United States Army" ? "h-16 w-16" : ""}`}>
-                        {item.logo ? (
-                          <AvatarImage 
-                            src={item.logo} 
-                            alt={`${item.company} logo`} 
-                            className={`object-contain ${item.company === "United States Army" ? "p-2" : "p-1"}`}
-                          />
-                        ) : (
-                          <AvatarFallback>{item.company[0]}</AvatarFallback>
-                        )}
+                        <AvatarImage 
+                          src={item.logo} 
+                          alt={`${item.company} logo`} 
+                          className={`object-contain ${item.company === "United States Army" ? "p-2" : "p-1"}`}
+                        />
+                        <AvatarFallback>{item.company[0]}</AvatarFallback>
                       </Avatar>
-                      <div className="flex-1">
+                      <div>
                         <h3 className="text-lg font-semibold text-foreground">{item.company}</h3>
                         <div className="text-primary text-sm font-medium">{item.title}</div>
                         <div className="text-xs text-muted-foreground">{item.division}</div>
