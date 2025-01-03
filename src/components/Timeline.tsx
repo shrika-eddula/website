@@ -62,8 +62,8 @@ export const Timeline = () => {
                 <div className="bg-card dark:bg-card backdrop-blur-sm rounded-lg p-4 border border-border">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                     <div className="flex items-center gap-3">
-                      <Avatar className="h-8 w-8 bg-background">
-                        <AvatarImage src={item.logo} alt={`${item.company} logo`} className="object-contain p-0.5" />
+                      <Avatar className="h-12 w-12 bg-background">
+                        <AvatarImage src={item.logo} alt={`${item.company} logo`} className="object-contain p-1" />
                         <AvatarFallback>{item.company[0]}</AvatarFallback>
                       </Avatar>
                       <div>
