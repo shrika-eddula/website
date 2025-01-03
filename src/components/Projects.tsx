@@ -101,11 +101,13 @@ export const Projects = () => {
               className="bg-card dark:bg-card backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-border cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-48 object-cover" 
-              />
+              <div className="aspect-video w-full overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-contain bg-black/5" 
+                />
+              </div>
               <div className="p-5">
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
