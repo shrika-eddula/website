@@ -9,7 +9,7 @@ const timelineItems = [
     division: "Vision Products Group",
     location: "Seattle, WA",
     description: "Prototyped Human Computer Interfaces for the R&D wing, leveraging AI and augmented reality to develop revolutionary experiences",
-    logo: "/apple.png"
+    logo: "/content/applecircle.webp"
   },
   {
     year: "April 2023 – June 2024",
@@ -18,7 +18,7 @@ const timelineItems = [
     division: "Camera Culture Group",
     location: "Boston, MA",
     description: "Reconstructed 3D models from satellite imagery using Neural Radiance Fields (NeRF) for handling complex lighting and shadow challenges",
-    logo: "/mit.png"
+    logo: "/content/media.png"
   },
   {
     year: "June 2023 – August 2023",
@@ -27,7 +27,7 @@ const timelineItems = [
     division: "Embedded Machine Learning",
     location: "Natik, MA",
     description: "Designed autonomous drone device for battlefield consciousness assessment using Glasgow Coma Scale with tinyML algorithms",
-    logo: "/army.png"
+    logo: "/content/army.webp"
   },
   {
     year: "May 2019 – February 2022",
@@ -36,7 +36,7 @@ const timelineItems = [
     division: "Computational Chemistry",
     location: "Dallas, TX",
     description: "Led computational chemistry research on toxin/pollutant adsorption prediction, resulting in 12 publications",
-    logo: "/unt.png"
+    logo: "/content/mit.png"
   }
 ];
 
