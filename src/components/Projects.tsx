@@ -57,7 +57,7 @@ const projects = [
   {
     title: "HierDTI",
     description: "Hierarchical Graph Transformer for Drug-Target Interaction Prediction",
-    tags: ["Machine Learning", "Graph Neural Networks", "Transformers", "Drug Discovery"],
+    tags: ["Graph Neural Networks", "Transformers", "Drug Discovery"],
     image: "/content/HierDTIWebsite/images/model.jpeg",
     links: {
       github: "https://github.com/shrika-eddula/HierDTI",
