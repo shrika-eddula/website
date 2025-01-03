@@ -44,7 +44,7 @@ const projects = [
   {
     title: "ArchiGen",
     description: "AI generated architectural floor plans via stable diffusion",
-    tags: ["Stable Diffusion", "GANs", "Generative AI", "Machine Learning"],
+    tags: ["Stable Diffusion", "GANs", "Generative AI"],
     image: "/content/images/archigen.png",
     video: "https://www.youtube.com/embed/kYeRlDDyd70",
     links: {
@@ -53,16 +53,6 @@ const projects = [
       slides: "/content/images/archigenPresentation.pdf"
     },
     details: "ArchiGen gives users the power to specify what general features they need in an architectural floor plan (e.g, number of rooms, type of building) and generates multiple potential layouts that meet the constraints. Our product breaks the bounds of creativity by considering arrangements that would not immediately have been thought of by the human mind."
-  },
-  {
-    title: "HierDTI",
-    description: "Hierarchical Graph Transformer for Drug-Target Interaction Prediction",
-    tags: ["Graph Neural Networks", "Transformers", "Drug Discovery"],
-    image: "/content/HierDTIWebsite/images/model.jpeg",
-    links: {
-      github: "https://github.com/shrika-eddula/HierDTI",
-    },
-    details: "HierDTI is a novel architecture that integrates molecular graph-based learning and protein sequence encoding through cross-modality attention mechanisms. By bridging atomic-level molecular features with sequence-level protein data, this model aims to predict binding affinities with both precision and interpretability."
   },
   {
     title: "WashWatch",
@@ -76,6 +66,16 @@ const projects = [
       slides: "/content/washwatch/slides.pdf"
     },
     details: "WashWatch is an innovative project that uses embedded machine learning to monitor laundry machines in real-time for anomalies. By integrating various sensors and implementing sophisticated ML algorithms on Arduino hardware, the system can detect unusual vibrations, sounds, or behavior patterns that might indicate maintenance needs or potential failures. This proactive monitoring approach helps prevent machine breakdowns and optimizes maintenance schedules."
+  },
+  {
+    title: "HierDTI",
+    description: "Hierarchical Graph Transformer for Drug-Target Interaction Prediction",
+    tags: ["Graph Neural Networks", "Transformers", "Drug Discovery"],
+    image: "/content/HierDTIWebsite/images/model.jpeg",
+    links: {
+      github: "https://github.com/shrika-eddula/HierDTI",
+    },
+    details: "HierDTI is a novel architecture that integrates molecular graph-based learning and protein sequence encoding through cross-modality attention mechanisms. By bridging atomic-level molecular features with sequence-level protein data, this model aims to predict binding affinities with both precision and interpretability."
   },
   {
     title: "Project 7",
