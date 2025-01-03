@@ -36,7 +36,7 @@ const timelineItems = [
     division: "Computational Chemistry",
     location: "Dallas, TX",
     description: "Led computational chemistry research on toxin/pollutant adsorption prediction, resulting in 12 publications",
-    logo: "/content/mit.png"
+    logo: ""
   }
 ];
 
@@ -61,7 +61,7 @@ export const Timeline = () => {
               <div className="flex-1 pb-6">
                 <div className="bg-card dark:bg-card backdrop-blur-sm rounded-lg p-4 border border-border">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-start gap-3">
                       <Avatar className={`h-12 w-12 bg-background ${item.company === "United States Army" ? "h-16 w-16" : ""}`}>
                         <AvatarImage 
                           src={item.logo} 
