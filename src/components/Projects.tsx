@@ -55,6 +55,16 @@ const projects = [
     details: "ArchiGen gives users the power to specify what general features they need in an architectural floor plan (e.g, number of rooms, type of building) and generates multiple potential layouts that meet the constraints. Our product breaks the bounds of creativity by considering arrangements that would not immediately have been thought of by the human mind."
   },
   {
+    title: "HierDTI",
+    description: "Hierarchical Graph Transformer for Drug-Target Interaction Prediction",
+    tags: ["Machine Learning", "Graph Neural Networks", "Transformers", "Drug Discovery"],
+    image: "/content/HierDTIWebsite/images/model.jpeg",
+    links: {
+      github: "https://github.com/shrika-eddula/HierDTI",
+    },
+    details: "HierDTI is a novel architecture that integrates molecular graph-based learning and protein sequence encoding through cross-modality attention mechanisms. By bridging atomic-level molecular features with sequence-level protein data, this model aims to predict binding affinities with both precision and interpretability."
+  },
+  {
     title: "WashWatch",
     description: "Embedded ML-Based Real-time Anomaly Monitoring for Laundry Machines",
     tags: ["Arduino", "C++", "Embedded ML", "Sensor Fusion"],
@@ -66,17 +76,6 @@ const projects = [
       slides: "/content/washwatch/slides.pdf"
     },
     details: "WashWatch is an innovative project that uses embedded machine learning to monitor laundry machines in real-time for anomalies. By integrating various sensors and implementing sophisticated ML algorithms on Arduino hardware, the system can detect unusual vibrations, sounds, or behavior patterns that might indicate maintenance needs or potential failures. This proactive monitoring approach helps prevent machine breakdowns and optimizes maintenance schedules."
-  },
-  {
-    title: "Project 6",
-    description: "Description for Project 6",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    image: "/placeholder.svg",
-    links: {
-      github: "#",
-      paper: "#",
-      slides: "#"
-    }
   },
   {
     title: "Project 7",
@@ -97,6 +96,8 @@ export const Projects = () => {
   const handleProjectClick = (project: typeof projects[0]) => {
     if (project.title === "Conjure") {
       window.open("https://devpost.com/software/conjure-2tyhq5", "_blank");
+    } else if (project.title === "HierDTI") {
+      window.open("/content/HierDTIWebsite/index.html", "_blank");
     } else {
       setSelectedProject(project);
     }
