@@ -30,15 +30,17 @@ const projects = [
     details: "This project was done over the summer of 2023 for the United States Army. The task was to research and design a smartphone sized drone attachment that can remotely assess a wounded Warfighter's state of consciousness on the battlefield asper the Glasgow Coma Scale. Through a combination of computer vision and natural language processing, the approach integrates both AI and functional hardware components, such as optical, audio, and laser, in a semi-autonomous system as a tool for future Army Medics that can give vital insight into a wounded Warfighter's neurological state."
   },
   {
-    title: "Project 3",
-    description: "Description for Project 3",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    image: "/placeholder.svg",
+    title: "Conjure",
+    description: "HackMIT project to retrieve actionable insights from large image datasets",
+    tags: ["Computer Vision", "LLMs", "Image Processing", "Data Analysis", "Python"],
+    image: "/content/images/conjure.jpeg",
+    video: "https://www.youtube.com/embed/your-video-id",
     links: {
-      github: "#",
+      github: "https://github.com/your-username/conjure",
       paper: "#",
       slides: "#"
-    }
+    },
+    details: "Conjure is a powerful tool developed during HackMIT that helps researchers and analysts extract meaningful insights from large collections of images. By combining computer vision with large language models, Conjure can process, analyze, and generate reports about visual patterns and trends in image datasets."
   },
   {
     title: "Project 4",
