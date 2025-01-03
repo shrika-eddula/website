@@ -43,15 +43,17 @@ const projects = [
     details: "Conjure is a powerful tool developed during HackMIT that helps researchers and analysts extract meaningful insights from large collections of images. By combining computer vision with large language models, Conjure can process, analyze, and generate reports about visual patterns and trends in image datasets."
   },
   {
-    title: "Project 4",
-    description: "Description for Project 4",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    image: "/placeholder.svg",
+    title: "ArchiGen",
+    description: "AI generated architectural floor plans via stable diffusion",
+    tags: ["Stable Diffusion", "GANs", "Generative AI", "Machine Learning"],
+    image: "/content/images/archigen.png",
+    video: "https://www.youtube.com/embed/kYeRlDDyd70",
     links: {
-      github: "#",
-      paper: "#",
-      slides: "#"
-    }
+      github: "https://github.com/shrika-eddula/archigen",
+      paper: "/content/images/archigenPresentation.pdf",
+      slides: "/content/images/archigenPresentation.pdf"
+    },
+    details: "ArchiGen gives users the power to specify what general features they need in an architectural floor plan (e.g, number of rooms, type of building) and generates multiple potential layouts that meet the constraints. Our product breaks the bounds of creativity by considering arrangements that would not immediately have been thought of by the human mind."
   },
   {
     title: "Project 5",
