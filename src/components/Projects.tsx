@@ -94,6 +94,14 @@ const projects = [
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
+  const handleProjectClick = (project: typeof projects[0]) => {
+    if (project.title === "Conjure") {
+      window.open("https://devpost.com/software/conjure-mit", "_blank");
+    } else {
+      setSelectedProject(project);
+    }
+  };
+
   return (
     <section className="py-24 px-4 bg-background dark:bg-background" id="projects">
       <div className="max-w-6xl mx-auto">
@@ -106,7 +114,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-card dark:bg-card backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-border cursor-pointer"
-              onClick={() => setSelectedProject(project)}
+              onClick={() => handleProjectClick(project)}
             >
               <div className="aspect-video w-full overflow-hidden">
                 <img 
