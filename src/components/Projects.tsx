@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "BuddyMate",
-    description: "ML project for US Army to detect consciousness of warfighters on battlefield",
+    description: "Autonomous drone system for US Army to detect consciousness of warfighters on battlefield",
     tags: ["OpenCV", "Speech Recognition", "Embedded ML", "Arduino", "LLM"],
     image: "/content/images/3d.png",
     video: "https://www.youtube.com/embed/vCpYQHbRQa4",
@@ -65,28 +65,27 @@ const projects = [
     details: "ArchiGen gives users the power to specify what general features they need in an architectural floor plan (e.g, number of rooms, type of building) and generates multiple potential layouts that meet the constraints. Our product breaks the bounds of creativity by considering arrangements that would not immediately have been thought of by the human mind."
   },
   {
+    title: "Activation Aware BitDelta",
+    description: "A novel approach to LLM quantization that considers activation patterns",
+    tags: ["Quantization", "Model Compression", "Deep Learning"],
+    image: "/content/images/BitDelta.webp",
+    links: {
+      github: "https://github.com/mpeng19/Activation-Aware-Bitdelta",
+      paper: "/content/ActAwareBitDelta.pdf",
+    },
+    details: "Activation-Aware BitDelta introduces an improved scale initialization scheme for 1-bit quantization of LLM fine-tuning weights. By incorporating activation statistics and deriving closed-form solutions for scale factors, our method eliminates the need for computationally expensive distillation steps. This results in >2x speedups while maintaining or improving model performance compared to traditional approaches. The method enables more efficient deployment of fine-tuned LLMs in resource-constrained environments, making multi-tenant serving more accessible without compromising quality."
+  },
+  {
     title: "WashWatch",
     description: "Embedded ML-Based Real-time Anomaly Monitoring for Laundry Machines",
     tags: ["Arduino", "C++", "Embedded ML", "Sensor Fusion"],
     image: "/content/images/arduino.jpg",
-    video: "https://www.youtube.com/embed/your-video-id",
     links: {
       github: "https://github.com/shrika-eddula/WashWatch",
       paper: "/content/washwatch/paper.pdf",
       slides: "/content/washwatch/slides.pdf"
     },
-    details: "WashWatch is an innovative project that uses embedded machine learning to monitor laundry machines in real-time for anomalies. By integrating various sensors and implementing sophisticated ML algorithms on Arduino hardware, the system can detect unusual vibrations, sounds, or behavior patterns that might indicate maintenance needs or potential failures. This proactive monitoring approach helps prevent machine breakdowns and optimizes maintenance schedules."
-  },
-  {
-    title: "Project 7",
-    description: "Description for Project 7",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    image: "/placeholder.svg",
-    links: {
-      github: "#",
-      paper: "#",
-      slides: "#"
-    }
+    details: "Last summer, my parents were having troubles with our washing and drying units, so in an effort to help them and also get familiar with tinyML development, I developed tinyML algorithms on an Arduino Nano 33 BLE Sense, including K-means clustering and anomaly detection, to identify irregular load patterns based on vibration, accelerometer, and audio data."
   }
 ];
 

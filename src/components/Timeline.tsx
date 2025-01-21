@@ -44,7 +44,7 @@ export const Timeline = () => {
   return (
     <section className="py-12 px-4 bg-background dark:bg-background" id="about">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-foreground">My Journey</h2>
+        <h2 className="text-3xl font-bold mb-8 text-foreground">Experiences</h2>
         <div className="space-y-6">
           {timelineItems.map((item, index) => (
             <motion.div

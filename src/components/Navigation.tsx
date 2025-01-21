@@ -48,12 +48,14 @@ export const Navigation = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link 
-                  to="/research"
+                <a 
+                  href="https://www.researchgate.net/profile/Shrika-Eddula?ev=brs_overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   Research
-                </Link>
+                </a>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
