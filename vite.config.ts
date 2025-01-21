@@ -4,14 +4,18 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
+  plugins: [react()],
   base: '/',
   server: {
     host: "::",
     port: 8080,
-    headers: {
-      'Content-Type': 'application/javascript'
-    }
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   build: {
     outDir: 'dist',
@@ -22,14 +26,7 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
+  optimizeDeps: {
+    include: ['react', 'react-dom']
+  }
+});
