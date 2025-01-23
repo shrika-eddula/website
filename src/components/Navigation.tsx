@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 export const Navigation = () => {
   const socialLinks = [
     { icon: Github, href: "https://github.com/shrika-eddula", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/YOUR_LINKEDIN", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/YOUR_TWITTER", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com/YOUR_INSTAGRAM", label: "Instagram" },
-    { icon: Mail, href: "mailto:YOUR_EMAIL@example.com", label: "Email" }
+    { icon: Linkedin, href: "https://www.linkedin.com/in/shrika-eddula/", label: "LinkedIn" },
+    { icon: Twitter, href: "https://x.com/ShrikaEddula", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/shrika_edd/", label: "Instagram" },
+    { icon: Mail, href: "mailto:shrika@mit.edu", label: "Email" }
   ];
 
   return (
