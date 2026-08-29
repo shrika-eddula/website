@@ -1,0 +1,187 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+}
+
+/* Center the content vertically and horizontally */
+body.is-preload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container for the entire page */
+#header,
+#main,
+#footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the header */
+#header {
+    text-align: center;
+}
+
+#logo {
+    margin-top: 20px;
+}
+
+#logo img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+#title {
+    margin-top: 10px;
+}
+
+#title, #title p {
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+}
+
+/* Navigation menu */
+#nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Social Icons */
+#header .icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#header .icons li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#header .icons li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for main sections */
+#main section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#main section h2 {
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+}
+
+#main section p {
+    margin: 20px 0;
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+}
+
+/* Project item styles */
+.item {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.item h3 {
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+}
+
+.item p {
+    margin: 10px 0;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+}
+
+.item .actions {
+    text-align: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.item .actions a {
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Contact form styles */
+#contact form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#contact form input,
+#contact form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+}
+
+#contact form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+#footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+}
+
