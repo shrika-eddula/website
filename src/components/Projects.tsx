@@ -81,9 +81,7 @@ const projects = [
     tags: ["Arduino", "C++", "Embedded ML", "Sensor Fusion"],
     image: "/content/images/arduino.jpg",
     links: {
-      github: "https://github.com/shrika-eddula/WashWatch",
-      paper: "/content/washwatch/paper.pdf",
-      slides: "/content/washwatch/slides.pdf"
+      github: "https://github.com/shrika-eddula/WashWatch"
     },
     details: "Last summer, my parents were having troubles with our washing and drying units, so in an effort to help them and also get familiar with tinyML development, I developed tinyML algorithms on an Arduino Nano 33 BLE Sense, including K-means clustering and anomaly detection, to identify irregular load patterns based on vibration, accelerometer, and audio data."
   }
