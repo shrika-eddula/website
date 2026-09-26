@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/Navigation";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { motion } from "framer-motion";
 
@@ -61,11 +60,10 @@ const publications = [
 const Research = () => {
   return (
     <div className="bg-background min-h-screen">
-      <Navigation />
-      <div className="fixed top-20 right-4 z-40 scale-125">
+      <div className="fixed top-4 right-4 z-40 scale-125">
         <ThemeToggle />
       </div>
-      <div className="pt-24 px-4 md:px-8">
+      <div className="pt-12 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

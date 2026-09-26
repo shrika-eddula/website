@@ -1,29 +1,21 @@
-import { motion } from "framer-motion";
+const lastUpdated = import.meta.env.VITE_LAST_UPDATED;
 
 export const ProfileSection = () => (
-  <motion.div
-    initial={{ opacity: 0, x: 20 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8, delay: 0.6 }}
-    className="lg:w-1/3 mt-8 lg:mt-16"
-  >
-    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg shadow-xl">
+  <div className="mt-8 text-base leading-relaxed lg:mt-16 lg:w-1/3">
+    <div className="relative h-40 w-40 overflow-hidden rounded-full border border-border shadow-lg sm:h-44 sm:w-44">
       <img 
-        src="/lovable-uploads/2a1579bc-3846-4ae0-9e17-39859574adcc.png"
-        alt="Profile"
-        className="object-cover w-full h-full"
+        src="/content/images/profile-slack.webp"
+        alt="Shrika Eddula"
+        width="512"
+        height="512"
+        decoding="async"
+        className="h-full w-full object-cover"
       />
     </div>
     
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.8 }}
-      className="mt-6 space-y-2 text-left"
-    >
-      <p className="font-semibold">Contact Information:</p>
-      <p>Email: shrika [at] mit [dot] edu</p>
-      <p>Currently: Cambridge, MA 📍</p>
-    </motion.div>
-  </motion.div>
+    <div className="mt-6 space-y-2 text-left">
+      <p>Currently: San Francisco, CA 📍</p>
+      <p className="text-muted-foreground">Last updated: {lastUpdated}</p>
+    </div>
+  </div>
 );

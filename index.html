@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shrika Eddula</title>
-    <meta name="description" content="Personal website of Shrika Eddula - Projects, Research, and Resume" />
+    <meta name="description" content="Shrika Eddula works on the Life Sciences team at OpenAI and writes about biology, medicine, and autonomous labs." />
     <meta name="author" content="Shrika Eddula" />
-    <meta property="og:title" content="Shrika Eddula | Portfolio" />
-    <meta property="og:description" content="Personal website of Shrika Eddula - Projects, Research, and Resume" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#020817" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Shrika Eddula" />
+    <meta property="og:description" content="Life sciences, biology, medicine, and autonomous labs." />
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="/og-image.png" />
+    <link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script>
+      (() => {
+        let storedTheme = null;
+        try {
+          storedTheme = localStorage.getItem("vite-ui-theme");
+        } catch {}
+        const dark = storedTheme === "dark" ||
+          (storedTheme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.add(dark ? "dark" : "light");
+        document.documentElement.style.colorScheme = dark ? "dark" : "light";
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

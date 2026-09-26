@@ -1,5 +1,4 @@
 import { Timeline } from "@/components/Timeline";
-import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
@@ -35,8 +34,7 @@ const honors = [
 const Resume = () => {
   return (
     <div className="bg-background dark:bg-background min-h-screen">
-      <Navigation />
-      <div className="pt-24 px-4 md:px-8">
+      <div className="pt-12 px-4 md:px-8">
         <motion.div 
           className="max-w-7xl mx-auto"
           initial={{ opacity: 0 }}

@@ -1,8 +1,14 @@
-"use client";
-
-import { createContext, useContext, useEffect, useState } from "react";
-
-type Theme = "dark" | "light" | "system";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import {
+  ThemeContext,
+  type ResolvedTheme,
+  type Theme,
+} from "@/lib/theme-context";
 
 type ThemeProviderProps = {
   children: React.ReactNode;
@@ -10,65 +16,85 @@ type ThemeProviderProps = {
   storageKey?: string;
 };
 
-type ThemeProviderState = {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
+const getSystemTheme = (): ResolvedTheme =>
+  window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+const resolveTheme = (theme: Theme): ResolvedTheme =>
+  theme === "system" ? getSystemTheme() : theme;
+
+const applyTheme = (theme: Theme) => {
+  const resolvedTheme = resolveTheme(theme);
+  const root = document.documentElement;
+
+  root.classList.toggle("dark", resolvedTheme === "dark");
+  root.classList.toggle("light", resolvedTheme === "light");
+  root.style.colorScheme = resolvedTheme;
+
+  return resolvedTheme;
 };
 
-const initialState: ThemeProviderState = {
-  theme: "system",
-  setTheme: () => null,
-};
+const getStoredTheme = (storageKey: string, defaultTheme: Theme): Theme => {
+  let storedTheme: string | null = null;
 
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
+  try {
+    storedTheme = localStorage.getItem(storageKey);
+  } catch {
+    return defaultTheme;
+  }
+
+  return storedTheme === "dark" ||
+    storedTheme === "light" ||
+    storedTheme === "system"
+    ? storedTheme
+    : defaultTheme;
+};
 
 export function ThemeProvider({
   children,
   defaultTheme = "system",
   storageKey = "vite-ui-theme",
-  ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
+  const [theme, setThemeState] = useState<Theme>(() =>
+    getStoredTheme(storageKey, defaultTheme)
+  );
+  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>(() =>
+    resolveTheme(getStoredTheme(storageKey, defaultTheme))
   );
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
+    setResolvedTheme(applyTheme(theme));
 
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
+    if (theme !== "system") return;
 
-      root.classList.add(systemTheme);
-      return;
-    }
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleSystemThemeChange = () => setResolvedTheme(applyTheme("system"));
 
-    root.classList.add(theme);
+    mediaQuery.addEventListener("change", handleSystemThemeChange);
+    return () => mediaQuery.removeEventListener("change", handleSystemThemeChange);
   }, [theme]);
 
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
+  const setTheme = useCallback(
+    (nextTheme: Theme) => {
+      try {
+        localStorage.setItem(storageKey, nextTheme);
+      } catch {
+        // Theme switching should still work when storage is unavailable.
+      }
+
+      setResolvedTheme(applyTheme(nextTheme));
+      setThemeState(nextTheme);
     },
-  };
+    [storageKey]
+  );
+
+  const value = useMemo(
+    () => ({ resolvedTheme, setTheme }),
+    [resolvedTheme, setTheme]
+  );
 
   return (
-    <ThemeProviderContext.Provider {...props} value={value}>
+    <ThemeContext.Provider value={value}>
       {children}
-    </ThemeProviderContext.Provider>
+    </ThemeContext.Provider>
   );
 }
-
-export const useTheme = () => {
-  const context = useContext(ThemeProviderContext);
-
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider");
-
-  return context;
-};

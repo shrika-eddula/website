@@ -1,23 +1,27 @@
-import { motion } from "framer-motion";
+import { BookOpen, Github, Linkedin, Mail, Twitter } from "lucide-react";
+
+const socialLinks = [
+  { icon: Github, href: "https://github.com/shrika-eddula", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/shrika-eddula/", label: "LinkedIn" },
+  { icon: Twitter, href: "https://x.com/ShrikaEddula", label: "Twitter" },
+  { icon: BookOpen, href: "https://www.goodreads.com/user/show/136154721-shrika-eddula", label: "Goodreads" },
+  { icon: Mail, href: "mailto:eddula.shrika@gmail.com", label: "Email" },
+];
 
 export const ActionButtons = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay: 0.4 }}
-    className="flex gap-4 pt-4"
-  >
-    <a 
-      href="/projects" 
-      className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-2"
-    >
-      View Projects
-    </a>
-    <a 
-      href="/resume" 
-      className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-2"
-    >
-      Resume
-    </a>
-  </motion.div>
+  <div className="flex flex-wrap items-center gap-3 pt-4">
+    {socialLinks.map((link) => (
+      <a
+        key={link.label}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={link.label}
+        aria-label={link.label}
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground/80 shadow-sm transition-[color,background-color,transform] hover:-translate-y-0.5 hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      >
+        <link.icon className="h-5 w-5" />
+      </a>
+    ))}
+  </div>
 );
